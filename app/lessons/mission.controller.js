@@ -48,7 +48,6 @@ function resetGate() {
     var currentStep = 'Beginner';
 
     missionCtrl.lastElement = lastEle;
-    console.log('lastEl',missionCtrl.lastElement);
     processSnapshot(missionData);
     
     
@@ -80,7 +79,6 @@ function resetGate() {
     };
 
     $scope.$watch('sequence', function(newVal, oldVal){
-      console.log('hello');
       $timeout(function(){
         Prism.highlightAll();  
       }, 100);
@@ -145,7 +143,6 @@ function resetGate() {
         missionCtrl.sequence = missionCtrl.elements[elem].sequence;
       }
       if(missionCtrl.sequence <= lastEleKey){
-        console.log('setting next shuffle');
         setNextShuffle(missionCtrl.sequence);
       }
     };
@@ -158,8 +155,6 @@ function resetGate() {
           missionCtrl.nextShuffle = element[seq].shuffle;
           missionCtrl.nextSequence = element[seq].sequence;
           currentStep = element[seq].step;
-          console.log('step ', step)
-          console.log('currentStep', currentStep)
         };
 
         if(!isFinal && step !== currentStep && step !== undefined){
@@ -197,7 +192,6 @@ function resetGate() {
           missionCtrl.gate.gateNeededEleNum += 1;
         }
       }
-      console.log('gateNeededEleNum',missionCtrl.gate.gateNeededEleNum);
     }
 
     //-------------------------//
@@ -250,11 +244,9 @@ function resetGate() {
     function run(testCase, handleMethod, apiRoute) {
       var temp; 
       temp = $localStorage.codeObj;
-      console.log(temp);
       if (handleMethod === 'evaluate') {
         document.getElementById('result').innerHTML = '';
         $('.aceCode').remove();
-        console.log('testcase', testCase);
 
         ////seth and robby commented this out...seems to be ok without
         //$localStorage.codeObj = '';
@@ -273,7 +265,6 @@ function resetGate() {
                         var data = data || null; \
                         var input = input || null');
         appendToScript(temp);
-        // console.log("temp is: ", temp)
         missionCtrl.codeResult = true;
 
         // Without this line then brainData will always be undefined!!
