@@ -3,9 +3,9 @@ A teaching platform that caters to educating people about neural networks.
 
 ## Team
 
-  - __Product Owner__: Leslie
-  - __Scrum Master__: Robby
-  - __Development Team Members__: Peter, Seth
+  - __Product Owner__: Leslie Pajuelo
+  - __Scrum Master__: Robby Bowie
+  - __Development Team Members__: Peter Juhwan Park, Seth Roberts
 
 ## Features
 
