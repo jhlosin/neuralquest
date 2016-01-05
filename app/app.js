@@ -37,6 +37,8 @@
 
 })();
 
+/*
+//commenting out : not good experience on mobile devices
 
 var lastScrollTop = 0;
 $(window).scroll(function() {
@@ -70,4 +72,5 @@ $(window).scroll(function() {
   
   lastScrollTop = st;
 });
+*/
 
